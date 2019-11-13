@@ -1,9 +1,11 @@
-﻿$profileDir = Split-Path -parent $profile
-
+﻿
+# Setup Windows Powershell by copying local scripts to the Powerhsell startup directory
+$profiledir = Split-Path -Parent $profile
 New-Item $profileDir -itemType Directory -Force -ErrorAction SilentlyContinue
 
-Copy-Item -path ./*.ps1 -Destination $profileDir -exclude "bootstrap.ps1"
+copy-item -path ./*.ps1 -Destination $profiledir -Exclude ".\bootstrap.ps1"
 
-Copy-Item -path /home/** -Destination $home -Include **
+Remove-Variable $profileDir
 
-Remove-Variable profileDir
+
+copy-item .\_vimrc -Destination $env:USERPROFILE

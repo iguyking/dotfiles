@@ -2,12 +2,6 @@
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-set guifont=Consolas:h12
-set dir=$TEMP
-set backupdir=$TEMP,c:\windows\temp
-set directory=$TEMP,c:\windows\temp,.
-set undodir=$TEMP,c:\windows\temp,.
-
 set diffexpr=MyDiff()
 function MyDiff()
   let opt = '-a --binary '
@@ -38,14 +32,17 @@ function MyDiff()
   endif
 endfunction
 
-" Plugins will be downloaded and run from this directory
+" Specify a directory for plugins
 call plug#begin('~/vimfiles/plugged')
 
-" Declare the list of plugins
-Plug 'tpope/vim-sensible'
+" Plugins to use
 Plug 'tpope/vim-fugitive'
-Plug 'elzr/vim-json'
-Plug 'PProvost/vim-ps1'
 
-" List ends here.  Plugins become available after this call
+Plug 'pprovost/vim-ps1'
+
+Plug 'chase/vim-ansible-yaml'
+
+Plug 'stephpy/vim-yaml'
+
+" Initialize the Plugin System
 call plug#end()

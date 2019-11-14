@@ -4,14 +4,18 @@ $MyBinaries = "$env:USERPROFILE\Documents\Binaries"
 #TODO: Figure out where to drop the git tree and then link files around
 
 # Setup Windows Powershell by copying local scripts to the Powerhsell startup directory
-$profiledir = Split-Path -Parent $profile
-$results = New-Item $profileDir -itemType Directory -Force -ErrorAction SilentlyContinue 
+$MSprofiledir = "~/Documents/WindowsPowershell"
+$PSprofiledir = "~/Documents/Powershell"
 
 
-copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $profiledir
+$results = New-Item $MSprofiledir -itemtype Directory -Force -ErrorAction SilentlyContinue 
+$results = New-Item $PSprofiledir -itemType Directory -Force -ErrorAction SilentlyContinue 
+
+
+copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $MSprofiledir
+copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $PSprofiledir
 copy-item -path daily-sync.ps1 -Destination $MyBinaries
 
-Remove-Variable profileDir
 
 # Configure and setup vim
 

@@ -55,3 +55,7 @@ scoop install python37
 
 # Install vscode - Don't use as of 1.40.1 - causes huge performance issue
 #scoop install vscode
+
+# Install Powershell Core
+scoop install pwsh
+

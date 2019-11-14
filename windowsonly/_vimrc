@@ -46,3 +46,7 @@ Plug 'stephpy/vim-yaml'
 
 " Initialize the Plugin System
 call plug#end()
+
+set backupdir=$TEMP
+set directory=$TEMP
+set undodir=$TEMP

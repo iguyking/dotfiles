@@ -1,14 +1,14 @@
-﻿# Script to install all dependencies needed for these dotfiles to work
+# Script to install all dependencies needed for these dotfiles to work
 # TODO: Fix so can be run more than once
 
 # Set in install.ps1 & daily-sync.ps1
 $MyBinaries = "$env:USERPROFILE\Documents\Binaries"
 mkdir -path $MyBinaries
 
-
-
+# Assumption Scoop & Git have been installed
 # Install scoop and use it for application installs
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+# Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+# scoop install git
 
 # Setup concfg 
 scoop install concfg
@@ -33,7 +33,7 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   )
 )
 # Link to this checked out repo using sudo (from scoop) & soft link approach
-sudo ln -s ./_vimrc $env:USERPROFILE/_vimrc
+# sudo ln -s ./_vimrc $env:USERPROFILE/_vimrc
 
 # Setup Hack Font
 scoop bucket add nerd-fonts
@@ -50,5 +50,5 @@ scoop install oh-my-posh
 scoop bucket add versions
 scoop install python37
 
-# Install vscode
-scoop install vscode
+# Install vscode - Don't use as of 1.40.1 - causes huge performance issue
+#scoop install vscode

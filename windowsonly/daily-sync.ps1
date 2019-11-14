@@ -15,7 +15,7 @@ Remove-Variable profileDir
 
 # Configure and setup vim
 
-#copy-item .\_vimrc -Destination $env:USERPROFILE
+copy-item .\_vimrc -Destination $env:USERPROFILE
 
 mkdir ~\vimfiles\autoload -ErrorAction SilentlyContinue
 $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

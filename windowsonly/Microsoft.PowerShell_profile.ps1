@@ -10,3 +10,6 @@ Remove-item Alias:\curl
 
 # Setup Git for Powershell
 Import-Module oh-my-posh
+import-module posh-git
+
+$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true

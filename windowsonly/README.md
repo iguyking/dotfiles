@@ -2,7 +2,11 @@
 
 * Change execution policies - `Set-ExecutionPolicy Unrestricted`
 * Setup the .ssh tree for id_rsa 
-* Install git and add to the path
+
+```
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+scoop install git
+```
 
 * Run `install.ps1` - Only run this once
 

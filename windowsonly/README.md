@@ -2,4 +2,12 @@
 
 * Change execution policies - `Set-ExecutionPolicy Unrestricted`
 * Setup the .ssh tree for id_rsa 
+* Install git and add to the path
+
+* Run `install.ps1` - Only run this once
+
+* Run `daily-sync.ps1`  - This should be run regularly to capture any updates that are out there and sync up with what's in git
+
+* Start vim and run `:PlugInstall`
+
 

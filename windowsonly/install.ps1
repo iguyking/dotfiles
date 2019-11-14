@@ -10,6 +10,9 @@ mkdir -path $MyBinaries
 # Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 # scoop install git
 
+# Configure git
+git config --global core.edit "$(Get-Command vim | % { $_.Source -replace '\\','\\\\' })"
+
 # Setup concfg 
 scoop install concfg
 &concfg import my-concfg.json

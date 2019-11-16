@@ -1,3 +1,7 @@
+# ahh yes... this would be so nice if it was a built in variable
+$here = Split-Path -Parent $MyInvocation.MyCommand.Path
+
+
 # Make the tab completion work like Bash
 Set-PSReadlineKeyHandler -Key Tab -Function Complete
 
@@ -9,26 +13,42 @@ $add = "c:\users\ian\scoop\modules"
 $env:PSModulePath = $env:PSModulePath + ';' + $add
 
 # Clean out so Curl works as expected
-remove-alias curl -ErrorAction SilentlyContinue
+if (Test-Path Alias:curl) { remove-item alias:curl }
 
-# Setup Git for Powershell
-Import-Module oh-my-posh
+
+# Setup Git for Powershell 
+import-module oh-my-posh
 import-module posh-git
 
 $GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
 
-Function GoGit { Set-Location -Path ~/Desktop/git }
+function GoGit { Set-Location -Path ~/Desktop/git }
 set-alias dg -value GoGit
 
-Function set-sshkeys-fv {
+function set-sshkeys-fv {
 	copy ~/.ssh/id_rsa.filevine ~/.ssh/id_rsa -force
 	copy ~/.ssh/id_rsa.pub.filevine ~/.ssh/id_rsa.pub -force
 }
 
-Function set-sshkeys-iguyking {
+function set-sshkeys-iguyking {
 	copy ~/.ssh/id_rsa.iguyking ~/.ssh/id_rsa -force
 	copy ~/.ssh/id_rsa.pub.iguyking ~/.ssh/id_rsa.pub -force
 }
 
+function which($name) { 
+	Get-Command $name | Select-Object Definition 
+}                                                  
+
+function rm-rf($item) { 
+	Remove-Item $item -Recurse -Force 
+}                                                             
+
+function touch($file) { 
+	"" | Out-File $file -Encoding ASCII 
+}                                                           
+
+Set-Alias g -value gvim                                                    
 set-alias set-sshkeys-filevine -value set-sshkeys-fv
 set-alias set-sshkeys-home -value set-sshkeys-iguyking
+
+

@@ -3,15 +3,14 @@
 
 # Set in install.ps1 & daily-sync.ps1
 $MyBinaries = "$env:USERPROFILE\Documents\Binaries"
-mkdir -path $MyBinaries
+mkdir -path $MyBinaries -erroraction silentlycontinue
 
 # Assumption Scoop & Git have been installed
 # Install scoop and use it for application installs
 # Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-# scoop install git
+#
+scoop install git
 
-# Configure git
-git config --global core.edit "$(Get-Command vim | % { $_.Source -replace '\\','\\\\' })"
 
 # Setup concfg 
 scoop install concfg
@@ -25,6 +24,9 @@ scoop install psutils
 
 # Install and get vim ready to use
 scoop install vim
+
+# Configure git
+git config --global core.edit "$(Get-Command vim | % { $_.Source -replace '\\','\\\\' })"
 
 mkdir ~\vimfiles\autoload -ErrorAction SilentlyContinue
 
@@ -41,7 +43,7 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 # Setup Hack Font
 scoop bucket add nerd-fonts
 
-scoop install Hack-NF
+#sudo scoop install Hack-NF
 
 # Install posh-git
 scoop bucket add extras
@@ -57,5 +59,5 @@ scoop install python37
 #scoop install vscode
 
 # Install Powershell Core
-scoop install pwsh
+#scoop install pwsh
 

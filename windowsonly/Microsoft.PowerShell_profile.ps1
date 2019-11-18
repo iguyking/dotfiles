@@ -48,7 +48,5 @@ function touch($file) {
 }                                                           
 
 Set-Alias g -value gvim                                                    
-set-alias set-sshkeys-filevine -value set-sshkeys-fv
-set-alias set-sshkeys-home -value set-sshkeys-iguyking
 
 

@@ -1,7 +1,7 @@
 ﻿# My personal binaries path
 $MyBinaries = "$env:USERPROFILE\Documents\Binaries"
 
-#TODO: Figure out where to drop the git tree and then link files around
+#TODO: Figure out where to drop the git tree and then link files around so this script can be run on powershell console launch
 
 # Setup Windows Powershell by copying local scripts to the Powerhsell startup directory
 $MSprofiledir = "~/Documents/WindowsPowershell"

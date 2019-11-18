@@ -9,8 +9,8 @@ Set-PSReadlineKeyHandler -Key Tab -Function Complete
 $remove = "C:\Windows\System32\OpenSSH\"
 $env:Path = ($env:Path.Split(';') | Where-Object -FilterScript {$_ -ne $Remove}) -join ';'
 
-#$add = "~\scoop\modules"
-#$env:PSModulePath = $env:PSModulePath + ';' + $add
+$add = "~\scoop\modules"
+$env:PSModulePath = $env:PSModulePath + ';' + $add
 
 # Clean out so Curl works as expected
 if (Test-Path Alias:curl) { remove-item alias:curl }

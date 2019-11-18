@@ -61,3 +61,11 @@ scoop install python37
 # Install Powershell Core
 #scoop install pwsh
 
+# Get this to latest version as pwsh comes with 1.0.0
+sudo Install-Module PowershellGet -Force
+sudo Remove-module -FullyQualifiedName @{ModuleName="PowershellGet";ModuleVersion="1.0.0.1"}
+# Since the latest version of posh-git is 0.7.3.1 in scoop
+PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
+
+
+Write-Host "Now start a new powershell session to see that everything is working right"

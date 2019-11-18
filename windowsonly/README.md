@@ -2,6 +2,7 @@
 
 * Change execution policies - `Set-ExecutionPolicy Unrestricted`
 * Setup the .ssh tree for id_rsa 
+* Install Powershell Core 6 (installation via scoop doesn't work well with vscode etc)
 
 ```
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')

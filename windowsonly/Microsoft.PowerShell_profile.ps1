@@ -25,7 +25,7 @@ $GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
 function GoGit { Set-Location -Path ~/Desktop/git }
 set-alias dg -value GoGit
 
-function set-sshkeys-fv {
+function set-sshkeys-filevine {
 	copy ~/.ssh/id_rsa.filevine ~/.ssh/id_rsa -force
 	copy ~/.ssh/id_rsa.pub.filevine ~/.ssh/id_rsa.pub -force
 }

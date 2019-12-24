@@ -55,11 +55,14 @@ scoop install oh-my-posh
 scoop bucket add versions
 scoop install python37
 
-# Install vscode - Don't use as of 1.40.1 - causes huge performance issue
+# Install vscode - Don't use as of 1.40.1 - causes huge performance issue (Tied to scoop install of git?)
 #scoop install vscode
 
 # Install Powershell Core
 #scoop install pwsh
+
+# SSH Configuration
+scoop install win32-openssh
 
 # Get this to latest version as pwsh comes with 1.0.0
 sudo Install-Module PowershellGet -Force

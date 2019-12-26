@@ -1,6 +1,8 @@
 # ahh yes... this would be so nice if it was a built in variable
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 
+# Set so pip won't run without a virtualenv
+$env:PIP_REQUIRE_VIRTUALENV=1
 
 # Make the tab completion work like Bash
 Set-PSReadlineKeyHandler -Key Tab -Function Complete

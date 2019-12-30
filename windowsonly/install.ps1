@@ -23,7 +23,8 @@ scoop install 7zip
 scoop install psutils
 
 # Install and get vim ready to use
-scoop install vim
+#scoop install vim  ## Default of 8.2.0.0 doesn't have python or other dyn bindings installed
+scoop install vim-nightly
 
 # Configure git
 git config --global core.edit "$(Get-Command vim | % { $_.Source -replace '\\','\\\\' })"
@@ -54,9 +55,11 @@ scoop install oh-my-posh
 
 scoop bucket add versions
 scoop install python37
+# Default Install Poetry for use
+pip install poetry
 
 # Install vscode - Don't use as of 1.40.1 - causes huge performance issue (Tied to scoop install of git?)
-#scoop install vscode
+scoop install vscode
 
 # Install Powershell Core
 #scoop install pwsh
@@ -72,3 +75,5 @@ PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
 
 
 Write-Host "Now start a new powershell session to see that everything is working right"
+Write-Host "Update Sleep mode for power savings"
+Write-Host "Install HACK Fonts"

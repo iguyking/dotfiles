@@ -12,13 +12,14 @@ $results = New-Item $MSprofiledir -itemtype Directory -Force -ErrorAction Silent
 $results = New-Item $PSprofiledir -itemType Directory -Force -ErrorAction SilentlyContinue 
 
 
+# TODO: Need to have this pull from github most likely.. Or find a location to clone out from in ~/Documents?
 copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $MSprofiledir
 copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $PSprofiledir
 copy-item -path daily-sync.ps1 -Destination $MyBinaries
 
 
 # Configure and setup vim
-
+# TODO: Fix if file is newer or not, don't copy, raise issue
 copy-item .\_vimrc -Destination $env:USERPROFILE
 
 mkdir ~\vimfiles\autoload -ErrorAction SilentlyContinue

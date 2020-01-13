@@ -68,6 +68,7 @@ scoop install vscode
 scoop install win32-openssh
 
 # Get this to latest version as pwsh comes with 1.0.0
+# TODO: Check for exist before removal, only do if exists
 sudo Install-Module PowershellGet -Force
 sudo Remove-module -FullyQualifiedName @{ModuleName="PowershellGet";ModuleVersion="1.0.0.1"}
 # Since the latest version of posh-git is 0.7.3.1 in scoop

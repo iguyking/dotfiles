@@ -44,7 +44,7 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 # Setup Hack Font
 scoop bucket add nerd-fonts
 
-#sudo scoop install Hack-NF
+sudo scoop install Hack-NF
 
 # Install posh-git
 scoop bucket add extras
@@ -58,7 +58,7 @@ scoop install python37
 # Default Install Poetry for use
 pip install poetry
 
-# Install vscode - Don't use as of 1.40.1 - causes huge performance issue (Tied to scoop install of git?)
+# Install vscode 
 scoop install vscode
 
 # Install Powershell Core
@@ -77,4 +77,3 @@ PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
 
 Write-Host "Now start a new powershell session to see that everything is working right"
 Write-Host "Update Sleep mode for power savings"
-Write-Host "Install HACK Fonts"

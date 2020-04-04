@@ -44,6 +44,8 @@ Plug 'chase/vim-ansible-yaml'
 
 Plug 'stephpy/vim-yaml'
 
+Plug 'hashivim/vim-hashicorp-tools'
+
 " Initialize the Plugin System
 call plug#end()
 

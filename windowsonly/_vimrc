@@ -50,3 +50,5 @@ call plug#end()
 set backupdir=$TEMP
 set directory=$TEMP
 set undodir=$TEMP
+
+set tabstop=4 softtabstop=0 shiftwidth=4 expandtab smarttab

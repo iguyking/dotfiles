@@ -23,6 +23,7 @@ import-module oh-my-posh
 import-module posh-git
 
 $GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
+set-them paradox
 
 function GoGit { Set-Location -Path ~/Desktop/git }
 set-alias dg -value GoGit

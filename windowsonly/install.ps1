@@ -74,6 +74,8 @@ sudo Remove-module -FullyQualifiedName @{ModuleName="PowershellGet";ModuleVersio
 # Since the latest version of posh-git is 0.7.3.1 in scoop
 PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
 
+# ZLocation 
+scoop install zlocation
 
 Write-Host "Now start a new powershell session to see that everything is working right"
 Write-Host "Update Sleep mode for power savings"

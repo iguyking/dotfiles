@@ -52,4 +52,6 @@ function touch($file) {
 
 Set-Alias g -value gvim                                                    
 
+# z directory fun
+import-module zlocation
 

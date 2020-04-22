@@ -55,3 +55,7 @@ Set-Alias g -value gvim
 # z directory fun
 import-module zlocation
 
+
+function clean-git {
+     git branch -vv | where {$_ -match '\[origin/.*: gone\]'} | foreach {git branch -D ($_.split(" ",[StringSplitOptions]'RemoveEmptyEntries')[0])}
+}

@@ -11,7 +11,6 @@ mkdir -path $MyBinaries -erroraction silentlycontinue
 #
 scoop install git
 
-
 # Setup concfg 
 scoop install concfg
 &concfg import my-concfg.json
@@ -76,6 +75,9 @@ PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
 
 # ZLocation 
 scoop install zlocation
+
+# Configure LongPathNames 
+sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
 
 Write-Host "Now start a new powershell session to see that everything is working right"
 Write-Host "Update Sleep mode for power savings"

@@ -100,3 +100,5 @@ function Set {
   }
 }
 
+# Enable Starship Prompt
+Invoke-Expression (&starship init powershell)

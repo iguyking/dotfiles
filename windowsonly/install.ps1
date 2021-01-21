@@ -61,7 +61,7 @@ pip install poetry
 scoop install vscode
 
 # Install Powershell Core
-#scoop install pwsh
+scoop install pwsh
 
 # SSH Configuration
 scoop install win32-openssh
@@ -78,6 +78,9 @@ scoop install zlocation
 
 # Configure LongPathNames 
 sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
+
+# Setup Starship for use
+scoop install starship
 
 Write-Host "Now start a new powershell session to see that everything is working right"
 Write-Host "Update Sleep mode for power savings"

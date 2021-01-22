@@ -52,6 +52,9 @@ Plug 'google/vim-jsonnet'
 
 Plug 'editorconfig/editorconfig-vim'
 
+" Plug 'cespare/vim-toml'
+Plug 'toml-lang/toml'
+
 " Initialize the Plugin System
 call plug#end()
 
@@ -60,3 +63,6 @@ set directory=$TEMP
 set undodir=$TEMP
 
 set tabstop=4 softtabstop=0 shiftwidth=4 expandtab smarttab
+
+set encoding=utf-8
+set fileencoding=utf-8

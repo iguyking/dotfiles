@@ -23,10 +23,10 @@ if (Test-Path Alias:curl) { remove-item alias:curl }
 
 # Setup Git for Powershell 
 #import-module oh-my-posh
-#import-module posh-git
+import-module posh-git
 
-$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
-set-theme agnoster
+#$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
+#set-theme agnoster
 
 function GoGit { Set-Location -Path ~/Desktop/git }
 set-alias dg -value GoGit

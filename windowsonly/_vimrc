@@ -67,4 +67,19 @@ set tabstop=4 softtabstop=0 shiftwidth=4 expandtab smarttab
 set encoding=utf-8
 set fileencoding=utf-8
 
-set guifont="Hack_NF:h12:cANSI:qDRAFT"
+if has('gui_running')
+  set guifont=Hack\ NF:h12:cANSI
+endif
+
+
+
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+   set pastetoggle=<Esc>[201~
+   set paste
+   return ""
+endfunction

@@ -17,6 +17,9 @@ copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $MSprofiledir
 copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $PSprofiledir
 copy-item -path daily-sync.ps1 -Destination $MyBinaries
 
+copy-item -recurse -force -path functions -destination $MSprofiledir/
+copy-item -recurse -force -path functions -destination $PSprofiledir/
+
 
 # Configure and setup vim
 # TODO: Fix if file is newer or not, don't copy, raise issue

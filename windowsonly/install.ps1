@@ -5,6 +5,8 @@
 $MyBinaries = "$env:USERPROFILE\Documents\Binaries"
 mkdir -path $MyBinaries -erroraction silentlycontinue
 
+scoop config shim kiennq
+
 # Assumption Scoop & Git have been installed
 # Install scoop and use it for application installs
 # Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
@@ -48,7 +50,7 @@ sudo scoop install Hack-NF
 # Install posh-git
 scoop bucket add extras
 
-scoop install oh-my-posh
+scoop install oh-my-posh3
 
 # Install python
 
@@ -62,6 +64,9 @@ scoop install vscode
 
 # Install Powershell Core
 scoop install pwsh
+
+# Install Windows-Terminal
+scoop install windows-terminal
 
 # SSH Configuration
 scoop install win32-openssh
@@ -81,6 +86,8 @@ sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 
 
 # Setup Starship for use
 scoop install starship
+scoop install extras/vcredist2019
 
 Write-Host "Now start a new powershell session to see that everything is working right"
 Write-Host "Update Sleep mode for power savings"
+

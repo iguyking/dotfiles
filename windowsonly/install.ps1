@@ -55,9 +55,9 @@ scoop install oh-my-posh3
 # Install python
 
 scoop bucket add versions
-scoop install python37
+#scoop install python37
 # Default Install Poetry for use
-pip install poetry
+#pip install poetry
 
 # Install vscode 
 scoop install vscode
@@ -77,6 +77,10 @@ sudo Install-Module PowershellGet -Force
 sudo Remove-module -FullyQualifiedName @{ModuleName="PowershellGet";ModuleVersion="1.0.0.1"}
 # Since the latest version of posh-git is 0.7.3.1 in scoop
 PowerShellGet\Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force
+
+# Terminal Icons
+sudo Install-Module -Name Terminal-Icons -Force
+Import-Module -Name Terminal-Icons
 
 # ZLocation 
 scoop install zlocation

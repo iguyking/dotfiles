@@ -4,17 +4,18 @@ $MyBinaries = "$env:USERPROFILE\Documents\Binaries"
 #TODO: Figure out where to drop the git tree and then link files around so this script can be run on powershell console launch
 
 # Setup Windows Powershell by copying local scripts to the Powerhsell startup directory
-$MSprofiledir = "~/Documents/WindowsPowershell"
+#$MSprofiledir = "~/Documents/WindowsPowershell"
 $PSprofiledir = "~/Documents/Powershell"
 
 
-$results = New-Item $MSprofiledir -itemtype Directory -Force -ErrorAction SilentlyContinue 
+#$results = New-Item $MSprofiledir -itemtype Directory -Force -ErrorAction SilentlyContinue 
 $results = New-Item $PSprofiledir -itemType Directory -Force -ErrorAction SilentlyContinue 
 
 
 # TODO: Need to have this pull from github most likely.. Or find a location to clone out from in ~/Documents?
-copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $MSprofiledir
-copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $PSprofiledir
+#copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $MSprofiledir
+#copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $PSprofiledir
+
 copy-item -path daily-sync.ps1 -Destination $MyBinaries
 
 copy-item -recurse -force -path functions -destination $MSprofiledir/

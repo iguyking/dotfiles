@@ -25,6 +25,8 @@ if (Test-Path Alias:curl) { remove-item alias:curl }
 #import-module oh-my-posh
 import-module posh-git
 
+import-module terminal-icons
+
 #$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $true
 #set-theme agnoster
 

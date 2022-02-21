@@ -33,7 +33,8 @@ import-module terminal-icons
 function GoGit { Set-Location -Path ~/Desktop/git }
 set-alias dg -value GoGit
 
-Set-Alias g -value gvim                                                    
+#Set-Alias g -value gvim                                                    
+Set-Alias vim -value nvim
 
 # z directory fun
 import-module zlocation

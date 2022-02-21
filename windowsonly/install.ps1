@@ -88,7 +88,7 @@ sudo Install-Module -Name Terminal-Icons -Force
 Import-Module -Name Terminal-Icons
 
 # ZLocation 
-scoop install zlocation
+#scoop install zlocation
 
 # Configure LongPathNames 
 sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1

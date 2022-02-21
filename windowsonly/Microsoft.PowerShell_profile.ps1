@@ -37,7 +37,7 @@ set-alias dg -value GoGit
 Set-Alias vim -value nvim
 
 # z directory fun
-import-module zlocation
+#import-module zlocation
 
 
 ## Load all functions into the system

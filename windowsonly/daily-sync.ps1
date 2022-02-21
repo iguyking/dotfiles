@@ -14,7 +14,7 @@ $results = New-Item $PSprofiledir -itemType Directory -Force -ErrorAction Silent
 
 # TODO: Need to have this pull from github most likely.. Or find a location to clone out from in ~/Documents?
 #copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $MSprofiledir
-#copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $PSprofiledir
+copy-item -path Microsoft.PowerShell_profile.ps1 -Destination $PSprofiledir
 
 copy-item -path daily-sync.ps1 -Destination $MyBinaries
 

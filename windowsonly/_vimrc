@@ -36,7 +36,7 @@ endfunction
 call plug#begin('~/vimfiles/plugged')
 
 " Plugins to use
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 
 Plug 'pprovost/vim-ps1'
 

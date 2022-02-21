@@ -23,9 +23,14 @@ scoop install 7zip
 # install  psutils for use
 scoop install psutils
 
+
 # Install and get vim ready to use
 #scoop install vim  ## Default of 8.2.0.0 doesn't have python or other dyn bindings installed
-scoop install vim-nightly
+#scoop install vim-nightly
+scoop install neovim
+
+# Need to soft link ~/AppData/Local/nvim to ~/.config/nvim
+# Need to install the autoload vim-plug to ~/.config/nvim/autoload
 
 # Configure git
 git config --global core.edit "$(Get-Command vim | % { $_.Source -replace '\\','\\\\' })"

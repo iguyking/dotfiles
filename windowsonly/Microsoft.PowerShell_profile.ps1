@@ -5,8 +5,8 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 $env:PIP_REQUIRE_VIRTUALENV=1
 
 # Set VISUAL to use vim
-$env:VISUAL="vim"
-$env:EDITOR="vim"
+$env:VISUAL="nvim"
+$env:EDITOR="nvim"
 
 # Make the tab completion work like Bash
 Set-PSReadlineKeyHandler -Key Tab -Function Complete

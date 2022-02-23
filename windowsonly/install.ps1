@@ -55,7 +55,7 @@ sudo scoop install Hack-NF
 # Install posh-git
 scoop bucket add extras
 
-scoop install oh-my-posh3
+#scoop install oh-my-posh3
 
 # Install python
 
@@ -74,7 +74,7 @@ scoop install pwsh
 scoop install windows-terminal
 
 # SSH Configuration
-scoop install win32-openssh
+#scoop install win32-openssh
 
 # Get this to latest version as pwsh comes with 1.0.0
 # TODO: Check for exist before removal, only do if exists

@@ -33,7 +33,7 @@ scoop install neovim
 # Need to install the autoload vim-plug to ~/.config/nvim/autoload
 
 # Configure git
-git config --global core.edit "$(Get-Command vim | % { $_.Source -replace '\\','\\\\' })"
+git config --global core.edit "$(Get-Command nvim | % { $_.Source -replace '\\','\\\\' })"
 
 mkdir ~\vimfiles\autoload -ErrorAction SilentlyContinue
 
@@ -95,7 +95,7 @@ sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 
 
 # Setup Starship for use
 scoop install starship
-scoop install extras/vcredist2019
+#scoop install extras/vcredist2019
 
 Write-Host "Now start a new powershell session to see that everything is working right"
 Write-Host "Update Sleep mode for power savings"
